@@ -1,0 +1,19 @@
+{
+    "type": [
+        "add",
+        "delete",
+        "rename",
+        "move",
+        "normal",
+        "login",
+        "state",
+        "group"
+    ],
+    "data": "num/text",
+    "status": [
+        "send",
+        "wait",
+        "success",
+        "failed"
+    ]
+}

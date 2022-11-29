@@ -1,0 +1,18 @@
+{
+    "type": [
+        "add",
+        "delete",
+        "normal",
+        "login",
+        "logout",
+        "registry",
+        "friends",
+        "online"
+    ],
+    "data": "num/text",
+    "status": [
+        "wait",
+        "success",
+        "failed"
+    ]
+}
