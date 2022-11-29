@@ -1,6 +1,12 @@
 # _*_ coding:utf-8 _*_
+# Project: 
 # FileName: DataExampleWrite.py
+# UserName: 高俊佶
+# ComputerUser：19305
+# Day: 2020/4/23
+# Time: 15:03
 # IDE: PyCharm
+# 最爱洪洪，永无BUG！
 
 import os
 import json
@@ -18,7 +24,9 @@ def encryption(u: str, p: str):
 cts_path = os.getcwd() + r'\Data\Example\client-to-server.json'
 stc_path = os.getcwd() + r'\Data\Example\server-to-client.json'
 user_path = os.getcwd() + r'\Data\Example\users.json'
-set_path = os.getcwd() + r'\Data\users.json'
+group_path = os.getcwd() + r'\Data\Example\groups.json'
+set_user_path = os.getcwd() + r'\Data\users.json'
+set_group_path = os.getcwd() + r'\Data\groups.json'
 
 cts = {
     'type': ['add', 'delete', 'rename', 'move',  'normal', 'login', 'state', 'group'],
@@ -44,6 +52,15 @@ user = {
     }
 }
 
+group = {
+    'num1': {
+        'maker': 'person',
+        'auto': True,  # 自动通过进群请求
+        'users': ['num2', 'num3'],
+        'notices': ['num4', 'num5']  # 询问是否允许进群
+    }
+}
+
 users = {
     '666666': {
         'type': 'admin',
@@ -62,10 +79,21 @@ users = {
     }
 }
 
+groups = {
+    '536640287': {
+        'maker': '666666',
+        'auto': False,
+        'users': ['666666', '1930502098', '2832561754', '2717057684', '1332848443', '1696085768', '1835609982'],
+        'notices': ['1598359293', '35386550']
+    }
+}
+
 open(cts_path, 'w', encoding='utf-8').write(json.dumps(cts, indent=4, ensure_ascii=False))
 open(stc_path, 'w', encoding='utf-8').write(json.dumps(stc, indent=4, ensure_ascii=False))
 open(user_path, 'w', encoding='utf-8').write(json.dumps(user, indent=4, ensure_ascii=False))
-open(set_path, 'w', encoding='utf-8').write(json.dumps(users, indent=4, ensure_ascii=False))
+open(group_path, 'w', encoding='utf-8').write(json.dumps(group, indent=4, ensure_ascii=False))
+# open(set_user_path, 'w', encoding='utf-8').write(json.dumps(users, indent=4, ensure_ascii=False))
+open(set_group_path, 'w', encoding='utf-8').write(json.dumps(groups, indent=4, ensure_ascii=False))
 
 # ADD
 data_example1 = {
